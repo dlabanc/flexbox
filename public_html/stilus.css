@@ -1,5 +1,5 @@
 @charset "UTF-8";
-main,header,article {
+main,header,article,footer,nav,section {
     border:1px solid grey;
     padding: 5px;
     box-sizing:border-box;
@@ -8,41 +8,82 @@ main,header,article {
 
 body {
     background-color: gray;
+    
 }
 
 main {
-    background-color: pink;
+    background-color: white;
     max-width:800px;
     width:80%;
     margin: auto;
+    
 }
 
-article {
-    background-color: white;
-
+nav {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
 }
 
-main {
+ul {
+    display:flex;
+    justify-content: space-between;
+    margin:5px;
+    padding:0;
+}
+
+li {
+    padding:5px;
+    list-style-type:none;
+}
+
+section {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-content:flex-start;
 }
 
 article {
     width:calc(25% - 4px);
-    align-self: center;
+
 }
 
-main article:nth-child(4) {
-    color:red;
-    order:-1;
+h2,#elso {
+    background-color: #cd1c1c;
+    color:#faffc9;
+}
+
+footer {
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+footer div {
+    display:flex;
+    justify-content: space-between;
+    border:1px solid grey;
+    width:40%;
+    padding:5px;
+    
+}
+
+
+section article:nth-child(5) {
+    width:calc(50% - 4px);
+}
+section article:nth-child(6) {
+    width:calc(50% - 4px);
+}
+
+article {
+    color:white;
+    background-color: grey;
 }
 
 header {
     width:100%;
-    order:-1;
 }
 
 @media screen and (max-width:600px) {
